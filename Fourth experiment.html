@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking Form</title>
+</head>
+<body>
+
+    <h1>Hotel Room Booking Form</h1>
+    <p>Please provide your details and reservation preferences below.</p>
+    
+    <form action="/submit-booking" method="POST">
+        
+        <fieldset>
+            <legend>Guest Information</legend>
+            <table border="0" cellpadding="5">
+                <tr>
+                    <td align="right">
+                        <label for="full-name">Full Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="full-name" name="full_name" required placeholder="First Last Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="email">Email Address:</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" required placeholder="name@example.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="phone">Phone Number:</label>
+                    </td>
+                    <td>
+                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Reservation Details</legend>
+            <table border="0" cellpadding="5">
+                <tr>
+                    <td align="right">
+                        <label for="check-in">Check-in Date:</label>
+                    </td>
+                    <td>
+                        <input type="date" id="check-in" name="check_in_date" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="check-out">Check-out Date:</label>
+                    </td>
+                    <td>
+                        <input type="date" id="check-out" name="check_out_date" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="room-type">Select Room Type:</label>
+                    </td>
+                    <td>
+                        <select id="room-type" name="room_type" required>
+                            <option value="" disabled selected>-- Choose a Room --</option>
+                            <option value="standard">Standard Single ($100)</option>
+                            <option value="deluxe">Deluxe Double ($150)</option>
+                            <option value="suite">Executive Suite ($300)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="guests">Number of Guests:</label>
+                    </td>
+                    <td>
+                        <input type="number" id="guests" name="number_of_guests" min="1" max="6" value="1" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="requests">Special Requests / Notes:</label><br>
+                        <textarea id="requests" name="special_requests" rows="4" cols="5
